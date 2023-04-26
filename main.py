@@ -407,6 +407,7 @@ label1.place(x=180, y=276, anchor=tk.CENTER)
 label2 = tk.Label(root, text="Believe in yourself, and anything is possible!", font=catchphrase_font, fg='#de639a', bg='#16001e', padx=10, pady=10)
 label2.place(x=180, y=317, anchor=tk.CENTER)
 
+
 # draw a gradient background on the canvas
 canvas.create_rectangle(0, 0, 360, 640, fill="", outline="")
 for i in range(640):
