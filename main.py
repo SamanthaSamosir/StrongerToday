@@ -13,8 +13,6 @@ mydb = mysql.connector.connect(
   database="strongtoday"
 )
 
-
-
 def start_now():
 
     label1.destroy()
@@ -22,8 +20,6 @@ def start_now():
     button.destroy()
     sign_in_button.place(x=180, y=300, anchor=tk.CENTER)
     sign_up_button.place(x=180, y=350, anchor=tk.CENTER)
-    """send_daily_emails()"""
-    """print("Start now button clicked!")"""
 
 def sign_up():
     def submit_signup(name, email, password, subscribe):
@@ -106,7 +102,6 @@ def sign_up():
                 }
             )
             print(resp['requestId'])
-
 
         # create a new window with the same size as the previous window and close the old window
         root2 = tk.Tk()
@@ -307,7 +302,7 @@ def sign_in():
             def send_email():
 
                 # send the email using the Courier API
-                client = Courier(auth_token="pk_prod_JYRK4ZZ2F2MJM3NS1DFFCBQTFTRP")
+                client = Courier(auth_token="pk_prod_JYRK4ZZ2F2MJM3NS1DFFCBQTFTRP") #You can use your own API Key
 
                 resp = client.send_message(
                     message={
@@ -327,8 +322,6 @@ def sign_in():
                                        activebackground='#f7b2b7', activeforeground='#ffffff')
             emailme_button.place(x=180, y=435, anchor=tk.CENTER)
 
-
-
             root.destroy()
             root3.mainloop()
         else:
@@ -338,7 +331,6 @@ def sign_in():
         # Close database connection
         cursor.close()
         db.close()
-
 
     sign_in_button.destroy()
     sign_up_button.destroy()
@@ -371,8 +363,6 @@ root.title("StrongerToday")
 root.geometry("360x640")
 root.resizable(False, False)
 
-
-
 # create a canvas widget
 canvas = tk.Canvas(root, width=360, height=640)
 canvas.pack()
@@ -390,7 +380,6 @@ sign_in_button.config(width=10, height=1, borderwidth=0, relief="solid", highlig
 sign_up_button = tk.Button(root, text="Sign Up", command=sign_up, font=catchphrase_font, fg='#ffffff', bg='#16001e', bd=0, highlightthickness=0, padx=20, pady=10, activebackground='#f7b2b7', activeforeground='#ffffff')
 sign_up_button.config(width=10, height=1, borderwidth=0, relief="solid", highlightbackground="#16001e")
 
-
 # place the buttons at the center of the app
 sign_in_button.place(x=180, y=400, anchor=tk.CENTER)
 sign_up_button.place(x=180, y=450, anchor=tk.CENTER)
@@ -407,7 +396,6 @@ label1.place(x=180, y=276, anchor=tk.CENTER)
 label2 = tk.Label(root, text="Believe in yourself, and anything is possible!", font=catchphrase_font, fg='#de639a', bg='#16001e', padx=10, pady=10)
 label2.place(x=180, y=317, anchor=tk.CENTER)
 
-
 # draw a gradient background on the canvas
 canvas.create_rectangle(0, 0, 360, 640, fill="", outline="")
 for i in range(640):
@@ -422,7 +410,6 @@ for i in range(640):
 button = tk.Button(root, text="Start Now", font=catchphrase_font, fg='#ffffff', bg='#16001e', bd=0, highlightthickness=0, command=start_now, padx=20, pady=10, activebackground='#f7b2b7', activeforeground='#ffffff')
 button.config(width=10, height=1, borderwidth=0, relief="solid", highlightbackground="#16001e")
 button.place(x=180, y=400, anchor=tk.CENTER)
-
 
 # start the main event loop
 root.mainloop()
