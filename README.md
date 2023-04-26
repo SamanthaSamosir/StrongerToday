@@ -1,5 +1,5 @@
 ## Overview
-  This documentation StrongerToday is a Python-based application that provides daily motivational quotes or prompts to help users stay inspired and focused on   their goals. The app has a minimalist user interface, making it easy to use for people of all ages and backgrounds. Users can also choose to receive daily      quotes via email to keep them motivated throughout the day. This documentation includes features, installations, API integration, etc.
+  StrongerToday is a Python-based application that provides daily motivational quotes or prompts to help users stay inspired and focused on   their goals. The app has a minimalist user interface, making it easy to use for people of all ages and backgrounds. Users can also choose to receive daily      quotes via email to keep them motivated throughout the day. This documentation includes features, installations, API integration, etc.
   
 ## Features
    1. User authentication: User able to create a personal account, and use proper charaters/numbers.
